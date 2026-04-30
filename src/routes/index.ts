@@ -3,11 +3,15 @@ import publicRoutes from "./public.routes";
 import adminRoutes from "./admin.routes";
 import UserRoutes from "./user.routes";
 import authRoutes from "./auth.routes";
+import ProtectedLayout from "../layouts/ProtectedLayout";
 
 const router = createBrowserRouter([
   publicRoutes,
-  adminRoutes,
-  UserRoutes,
+  {
+    path: "/",
+    Component: ProtectedLayout,
+    children: [adminRoutes, UserRoutes],
+  },
   authRoutes,
 ]);
 
