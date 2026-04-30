@@ -1,7 +1,10 @@
-import { Outlet } from "react-router";
+import { Navigate, Outlet } from "react-router";
 import Button from "../components/Button";
+import useAuthStore from "../hooks/auth/useAuthStore";
 
 const AuthLayout: React.FC = () => {
+  const { token } = useAuthStore();
+  if (token) return <Navigate to={"/"} replace />;
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-neutral-100 ">
       <div className="bg-[#F3F0FF] grid grid-cols-1 lg:grid-cols-2 gap-10  p-10 shadow-lg max-w-6xl rounded-3xl">

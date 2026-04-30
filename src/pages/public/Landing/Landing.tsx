@@ -4,7 +4,7 @@ import Input from "../../../components/Input";
 
 const LandingPage = () => {
   return (
-    <>
+    <main className="min-h-screen flex flex-col justify-center items-center gap-5">
       <h1 className="text-3xl font-semibold">Landing Page</h1>
       <Link to={"/auth/login"} className="underline">
         Login
@@ -43,7 +43,7 @@ const LandingPage = () => {
         </Button>
       </div>
       <Input label="Input" placeholder="Placeholder" />
-    </>
+    </main>
   );
 };
 
