@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import Button from "../../../components/Button";
+import Input from "../../../components/Input";
 
 const LandingPage = () => {
   return (
@@ -41,6 +42,7 @@ const LandingPage = () => {
           Destructive
         </Button>
       </div>
+      <Input label="Input" placeholder="Placeholder" />
     </>
   );
 };

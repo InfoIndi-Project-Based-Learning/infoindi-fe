@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import type { ButtonProps } from "./Button.data";
 import { buttonVariants, sizes, baseStyles } from "./Button.data";
+import cn from "../../libs/clsx";
 
 const Button: FC<ButtonProps> = ({
   variant = "primary",
@@ -11,7 +12,12 @@ const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`${baseStyles} ${sizes[size]} ${buttonVariants[variant]} ${className}`}
+      className={cn(
+        baseStyles,
+        buttonVariants[variant],
+        sizes[size],
+        className,
+      )}
       {...props}
     >
       {children}

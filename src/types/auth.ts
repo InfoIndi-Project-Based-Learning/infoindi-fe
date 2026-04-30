@@ -1,4 +1,6 @@
+import type z from "zod";
 import type { User } from "./user";
+import type { loginSchema, registerSchema } from "../libs/zod/authValidation";
 
 export interface LoginPayload {
   email: string;
@@ -16,3 +18,6 @@ export interface AuthResponse {
   user: User;
   access_token: string;
 }
+
+export type LoginType = z.infer<typeof loginSchema>;
+export type RegisterType = z.infer<typeof registerSchema>;

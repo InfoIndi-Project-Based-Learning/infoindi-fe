@@ -1,9 +1,7 @@
+import LoginView from "./Login.view";
+
 const LoginPage = () => {
-  return (
-    <>
-      <h1>Login</h1>
-    </>
-  );
+  return <LoginView />;
 };
 
 export default LoginPage;

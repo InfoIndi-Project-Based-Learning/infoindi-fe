@@ -2,7 +2,7 @@ import {
   type AuthResponse,
   type LoginPayload,
   type RegisterPayload,
-} from "../types/auth";
+} from "../types/auth.ts";
 import apiService from "./baseService";
 
 const registerService = async (payload: RegisterPayload) => {
