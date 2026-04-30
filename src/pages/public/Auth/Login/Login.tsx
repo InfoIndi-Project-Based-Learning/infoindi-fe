@@ -1,7 +1,7 @@
-import LoginView from "./Login.view";
+import LoginForm from "./LoginForm";
 
 const LoginPage = () => {
-  return <LoginView />;
+  return <LoginForm />;
 };
 
 export default LoginPage;
