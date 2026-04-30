@@ -1,4 +1,3 @@
-import type { LucideIcon } from "lucide-react";
 import type { InputProps } from "./Input.data";
 import cn from "../../libs/clsx";
 
