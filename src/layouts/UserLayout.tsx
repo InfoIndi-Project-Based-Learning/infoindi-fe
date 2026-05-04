@@ -3,12 +3,7 @@ import useAuthStore from "../hooks/auth/useAuthStore";
 
 const UserLayout = () => {
   const { user } = useAuthStore();
-  if (user?.role !== "user") return <Navigate to={"/"} />;
-  return (
-    <>
-      <Outlet />
-    </>
-  );
+  return user.role !== "user" ? <Navigate to={"/"} /> : <Outlet />;
 };
 
 export default UserLayout;

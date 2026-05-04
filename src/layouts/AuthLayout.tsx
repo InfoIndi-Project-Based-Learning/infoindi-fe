@@ -1,9 +1,11 @@
-import { Navigate, Outlet } from "react-router";
+import { Link, Navigate, Outlet, useLocation } from "react-router";
 import Button from "../components/Button";
 import useAuthStore from "../hooks/auth/useAuthStore";
 
 const AuthLayout: React.FC = () => {
+  const { pathname } = useLocation();
   const { token } = useAuthStore();
+
   if (token) return <Navigate to={"/"} replace />;
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-neutral-100 ">
@@ -40,10 +42,15 @@ const AuthLayout: React.FC = () => {
             Login Dengan Google
           </Button>
           <p className="text-center text-sm mt-4 text-gray-600">
-            Belum punya akun?{" "}
-            <a href="/auth/register" className="text-[#6A37D4] font-medium">
-              Daftar
-            </a>
+            {pathname === "/auth/login"
+              ? "Belum punya akun?"
+              : "Sudah punya akun?"}{" "}
+            <Link
+              to={pathname === "/auth/login" ? "/auth/register" : "/auth/login"}
+              className="text-[#6A37D4] font-medium"
+            >
+              {pathname === "/auth/login" ? "Daftar di sini" : "Masuk di sini"}
+            </Link>
           </p>
         </div>
       </div>

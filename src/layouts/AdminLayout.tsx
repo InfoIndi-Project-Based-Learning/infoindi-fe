@@ -3,12 +3,7 @@ import useAuthStore from "../hooks/auth/useAuthStore";
 
 const AdminLayout = () => {
   const { user } = useAuthStore();
-  if (user?.role !== "admin") return <Navigate to={"/"} />;
-  return (
-    <>
-      <Outlet />
-    </>
-  );
+  return user.role !== "admin" ? <Navigate to={"/"} /> : <Outlet />;
 };
 
 export default AdminLayout;
