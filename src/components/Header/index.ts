@@ -1,4 +1,4 @@
-import Header from "./Header";
 import { memo } from "react";
+import { Header } from "./Header";
 
-export default memo(Header);
+export default memo(Header)
