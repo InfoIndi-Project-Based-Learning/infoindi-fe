@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import Button from "../../../components/Button";
 import Input from "../../../components/Input";
+import { PostCard } from "../../../components/Card/PostCard";
 
 const LandingPage = () => {
   return (
@@ -43,6 +44,13 @@ const LandingPage = () => {
         </Button>
       </div>
       <Input label="Input" placeholder="Placeholder" />
+      <PostCard
+        badge="Test"
+        title="Risol Mayo"
+        timeAgo="200"
+        likesCount={200}
+        owner="Fauzi Ahmad Zaki"
+      />
     </main>
   );
 };
