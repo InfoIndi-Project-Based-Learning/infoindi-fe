@@ -17,6 +17,7 @@ const RegisterForm = () => {
             value={field.value}
             error={fieldState.error?.message}
             label="FULLNAME"
+            required
           />
         )}
       />
@@ -31,6 +32,7 @@ const RegisterForm = () => {
             value={field.value}
             error={fieldState.error?.message}
             label="EMAIL"
+            required
           />
         )}
       />
@@ -44,6 +46,7 @@ const RegisterForm = () => {
             value={field.value}
             error={fieldState.error?.message}
             label="PASSWORD"
+            required
           />
         )}
       />
@@ -57,6 +60,7 @@ const RegisterForm = () => {
             value={field.value}
             error={fieldState.error?.message}
             label="CONFIRM PASSWORD"
+            required
           />
         )}
       />
