@@ -26,7 +26,8 @@ export interface ApiError {
 
 export interface ApiParams {
   per_page?: number;
-  search?: number;
+  search?: string;
   sort_by?: string;
   order_by?: "asc" | "desc";
+  [key: string]: any;
 }
